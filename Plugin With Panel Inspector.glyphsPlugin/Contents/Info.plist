@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>plugin</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.markfromberg.com.Glyphs.MyPluginWithPanelInspector</string>
+	<string>com.markfromberg.com.MyPluginWithPanelInspector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
