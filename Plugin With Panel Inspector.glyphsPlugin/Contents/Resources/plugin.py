@@ -22,19 +22,17 @@ class MyPluginWithPanelInspector(GeneralPlugin):
     def settings(self):
         self.name = Glyphs.localize(
             {
-                "en": "My Plugin With Panel Inspector",
-                "de": "Mein Plug-in mit Panel Inspector",
+                "en": "Plugin With Panel Inspector",
+                "de": "Plug-in mit Panel Inspector",
             }
         )
 
     @objc.python_method
     def start(self):
-        newMenuItem = NSMenuItem(self.name, self.showWindow_)
-        Glyphs.menu[EDIT_MENU].append(newMenuItem)
+        print("started Plugin with Panel Inspector")
 
-    def showWindow_(self, sender):
-        """Do something like show a window"""
-        print("show Windows")
+        # newMenuItem = NSMenuItem(self.name, self.showWindow_)
+        # Glyphs.menu[EDIT_MENU].append(newMenuItem)
 
     @objc.python_method
     def __file__(self):
