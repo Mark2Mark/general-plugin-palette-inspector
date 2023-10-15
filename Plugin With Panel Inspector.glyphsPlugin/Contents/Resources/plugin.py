@@ -65,6 +65,7 @@ class MyPluginWithPanelInspector(GeneralPlugin):
 
     # def inspectorViewControllersForLayer_(self, layer):
     def panelInspectorsForLayer_(self, layer):
+        """Invoke Inspector Panel from Edit Tab"""
         try:
             self.paletteView.group.label.set(layer.name)
         except:
@@ -73,7 +74,12 @@ class MyPluginWithPanelInspector(GeneralPlugin):
             self.paletteView.group.label.set(
                 [s.__class__.__name__ for s in layer.selection]
             )
-            return [self]
+        return [self]
+
+    def panelInspectorsForSelectedLayers_(self, layers):
+        """Invoke Inspector Panel from Font View"""
+        if layers:
+            self.paletteView.group.label.set([l.parent.name for l in layers])
         return [self]
 
     def view(self):
